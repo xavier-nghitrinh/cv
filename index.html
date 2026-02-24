@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xavier Trinh - AI-Driven Data & Analytics Leader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px 60px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            border-bottom: 3px solid #2c5aa0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #2c5aa0;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .contact a {
+            color: #2c5aa0;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Headers */
+        h2 {
+            font-size: 1.6em;
+            color: #2c5aa0;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 8px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            color: #1a1a1a;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.1em;
+            color: #2c5aa0;
+            margin-top: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        /* Professional Summary */
+        .summary {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #2c5aa0;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .summary p {
+            margin-bottom: 12px;
+        }
+
+        .summary p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Core Competencies Grid */
+        .competencies {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        .competency-area {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 5px;
+            border-left: 3px solid #2c5aa0;
+        }
+
+        .competency-area h4 {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .competency-area ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .competency-area li {
+            padding: 4px 0;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .competency-area li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #2c5aa0;
+            font-weight: bold;
+        }
+
+        /* Technical Expertise Grid */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        .tech-area {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 5px;
+            border-left: 3px solid #2c5aa0;
+        }
+
+        .tech-area h4 {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .tech-area p {
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .tech-area ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .tech-area li {
+            padding: 4px 0;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .tech-area li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #2c5aa0;
+            font-weight: bold;
+        }
+
+        /* Experience Section */
+        .job {
+            margin-bottom: 30px;
+        }
+
+        .job-header {
+            background: linear-gradient(to right, #f0f4f8, transparent);
+            padding: 12px 15px;
+            margin-bottom: 12px;
+            border-left: 4px solid #2c5aa0;
+        }
+
+        .job-title {
+            font-size: 1.15em;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .company {
+            color: #2c5aa0;
+            font-weight: 600;
+        }
+
+        .duration {
+            color: #666;
+            font-size: 0.95em;
+            font-style: italic;
+        }
+
+        .job-description {
+            margin-bottom: 15px;
+            color: #444;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* Bullet Points */
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 12px;
+        }
+
+        .education-item strong {
+            color: #2c5aa0;
+        }
+
+        /* What I Bring Section */
+        .value-prop {
+            background: #f0f4f8;
+            padding: 25px;
+            border-radius: 5px;
+            border-left: 4px solid #2c5aa0;
+            margin-top: 25px;
+        }
+
+        .value-prop p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .value-prop ul {
+            margin-top: 15px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 20px;
+                max-width: 100%;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            .job {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 25px;
+            }
+
+            .competencies, .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Xavier Trinh</h1>
+            <div class="subtitle">AI-Driven Data & Analytics Leader</div>
+            <div class="contact">
+                📧 <a href="mailto:xavier.nghitrinh@gmail.com">xavier.nghitrinh@gmail.com</a> | 
+                🔗 <a href="https://www.linkedin.com/in/xavier-trinh-0a899875/" target="_blank">LinkedIn</a> | 
+                📝 <a href="https://medium.com/@xavier.nghitrinh" target="_blank">Medium Blog</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <div class="summary">
+                <p>Data & Analytics Leader with 10+ years building platforms that turn data into competitive advantage. I architect scalable cloud solutions, pioneer AI-powered analytics, and lead teams to deliver measurable business impact—currently establishing Australia's first conversational AI analytics platform at Woolworths, positioning the organisation ahead of market.</p>
+                <p>My strength is translating complex technical challenges into practical solutions: multi-agent AI systems that automate executive reporting, billion-record data foundations that eliminate redundant work, and governance frameworks that scale without slowing innovation. I thrive in environments where I can be hands-on with architecture while partnering with executives on direction—building AI-first data cultures that empower stakeholders and accelerate decision-making.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Core Competencies</h2>
+            <div class="competencies">
+                <div class="competency-area">
+                    <h4>AI & Advanced Analytics</h4>
+                    <ul>
+                        <li>Generative AI & LLM Integration</li>
+                        <li>Multi-Agent AI Orchestration</li>
+                        <li>RAG (Retrieval-Augmented Generation) Systems</li>
+                        <li>Automated Insight Generation</li>
+                        <li>Predictive Analytics & Anomaly Detection</li>
+                    </ul>
+                </div>
+
+                <div class="competency-area">
+                    <h4>Data Platform & Engineering</h4>
+                    <ul>
+                        <li>Cloud Data Architecture (mainly GCP, AWS)</li>
+                        <li>Data Warehouse Modernisation & Optimisation</li>
+                        <li>ETL/ELT Pipeline Design (Idempotency, Incremental Processing)</li>
+                        <li>BigQuery Optimisation (Partitioning, Clustering, Cost Management)</li>
+                        <li>Airflow/DAG Design Patterns & Orchestration</li>
+                        <li>Data Governance & Quality Automation</li>
+                        <li>DataOps & Platform Reliability Engineering</li>
+                    </ul>
+                </div>
+
+                <div class="competency-area">
+                    <h4>Business Intelligence & Visualisation</h4>
+                    <ul>
+                        <li>Enterprise BI Strategy</li>
+                        <li>Self-Service Analytics</li>
+                        <li>Dashboard & Report Automation</li>
+                        <li>Data Modelling & Semantic Layers</li>
+                        <li>Stakeholder Engagement & Training</li>
+                    </ul>
+                </div>
+
+                <div class="competency-area">
+                    <h4>Leadership & Delivery</h4>
+                    <ul>
+                        <li>Roadmap Planning & Prioritisation</li>
+                        <li>Executive Stakeholder Management</li>
+                        <li>Team Leadership & Capability Development</li>
+                        <li>Agile Project Delivery & Change Management</li>
+                        <li>Cross-Functional Collaboration</li>
+                        <li>Technical Recruitment & Onboarding</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title"><span class="company">Woolworths Group - WooliesX/WIQ</span> | BI Manager</div>
+                    <div class="duration">Jun 2021 - Present</div>
+                </div>
+                <p class="job-description">Leading data and analytics strategy across Everyday Rewards, Partner Ecosystem, and Digital channels, managing cross-functional team and establishing <strong>AI-first data culture</strong> as market differentiator. Partnering with executive stakeholders to align data roadmap with business priorities, delivering multi-year platform modernisation initiatives spanning AI-powered self-service analytics, automated governance, and <strong>cross-business-unit capability uplift</strong>.</p>
+
+                <h4>Data Democratisation Strategy & AI-Powered Analytics Platform</h4>
+                <ul>
+                    <li><strong>Led data democratisation initiative within business units</strong>, architecting and deploying <strong>Data Maven</strong>—a strategic market differentiator positioning organisation ahead of competitors through conversational AI capabilities for self-service analytics</li>
+                    <li>Designed <strong>multi-tenant platform architecture</strong> on Google Cloud (Vertex AI / Cloud Run) with production-grade considerations: <strong>scalability</strong> (concurrent user handling), <strong>security</strong> (role-based access, audit logging), <strong>cost optimisation</strong> (quota controls, resource management), and operational resilience</li>
+                    <li>Implemented sophisticated <strong>multi-agent orchestration system</strong> coordinating specialised agents (SQL generation, Python analytics, visualisation, document retrieval) with context-aware RAG architecture combining vector embeddings and semantic search across <strong>organisational knowledge repositories</strong></li>
+                    <li><strong>Established AI-first data culture</strong> enabling 40+ users across business units to independently query billion-record datasets, achieving significant reduction in analyst dependency and accelerating insight-to-action cycles</li>
+                    <li>Built comprehensive collaboration capabilities including <strong>external data integration</strong> (CSV/Excel ingestion), <strong>persistent conversation state management</strong> for iterative analysis, <strong>knowledge sharing workflows</strong> (conversation export/review), and integrated feedback loops for continuous platform improvement</li>
+                    <li>Platform handles <strong>multi-terabyte datasets</strong> with <strong>plug-and-play extensibility</strong> through data dictionary pattern, enabling rapid onboarding of new data sources without code changes—demonstrating scalable architecture thinking</li>
+                </ul>
+
+                <h4>Executive Intelligence Automation & Reporting Pipeline</h4>
+                <ul>
+                    <li>Architected <strong>parallel multi-agent orchestration pipeline</strong> processing 100+ KPIs across 10+ business units, demonstrating <strong>asynchronous processing design patterns</strong> for scalability and performance optimisation</li>
+                    <li>Implemented sophisticated <strong>statistical analysis algorithms</strong> for automated trend detection (directional analysis, strength classification), anomaly identification, and comparative performance benchmarking—establishing <strong>"always-on" executive intelligence capability</strong></li>
+                    <li>Delivered <strong>10x efficiency improvement</strong> (10 analysts × 20 minutes → 5-minute automated turnaround), freeing analytical capacity for higher-value work while maintaining quality through AI validation checkpoints</li>
+                    <li>Designed <strong>template-based governance framework</strong> allowing analyst knowledge injection for context enrichment while ensuring narrative consistency and brand compliance—balancing AI automation with human oversight</li>
+                    <li>System provides <strong>actionable focus areas</strong> by automatically curating top/worst/interesting performance stories, enabling executive stakeholders to identify priority actions without manual report analysis</li>
+                </ul>
+
+                <h4>Enterprise Data Platform & Architecture Excellence</h4>
+                <ul>
+                    <li><strong>Designed and delivered data platform roadmap</strong> establishing <strong>billion-record source-of-truth data foundations</strong> across sales, rewards membership, partner transactions, and campaign performance—enabling <strong>consistent cross-business-unit reporting and analysis</strong></li>
+                    <li>Implemented <strong>BigQuery optimisation best practices</strong> including table partitioning (time-based), clustering (high-cardinality dimensions), and materialised views for query performance, achieving <strong>significant cost reduction</strong> through slot optimisation and storage management</li>
+                    <li>Architected <strong>dimensional data models</strong> with semantic layers optimised for <strong>multi-terabyte dataset analysis</strong> at scale, incorporating slowly-changing dimension handling, fact table aggregation strategies, and denormalisation patterns where appropriate</li>
+                    <li>Delivered <strong>measurable business impact</strong>: <strong>computing resource savings</strong> through query optimisation, <strong>improved data accuracy</strong> via single source of truth, <strong>productivity gains across business units</strong> by eliminating redundant ETL processes and enabling self-service analytics</li>
+                </ul>
+
+                <h4>Data Governance Automation & Platform Operations</h4>
+                <ul>
+                    <li><strong>Established automated data governance framework</strong> integrating BigQuery audit logs, metadata APIs, information schema, and IAM policies to provide <strong>comprehensive data lineage, access control visibility, and compliance readiness</strong></li>
+                    <li>Implemented <strong>intelligent rule-based classification engine</strong> analysing object usage patterns, access history, and dependency graphs to identify unused assets, orphaned views, stale grants, and optimisation opportunities—<strong>reducing storage costs</strong> and <strong>improving data health</strong> metrics</li>
+                    <li>Designed <strong>Airflow DAG monitoring system</strong> analysing task execution patterns, dependency chains, and resource utilisation to detect <strong>performance degradation trends</strong>, configuration issues, and optimisation opportunities—demonstrating <strong>DataOps best practices</strong> including observability, automated alerting, and proactive issue resolution</li>
+                    <li>Applied <strong>pipeline engineering principles</strong> across ETL workflows: <strong>idempotency</strong> (safe reruns), <strong>incremental processing</strong> patterns, <strong>error handling with replay capability</strong>, and dependency management—ensuring reliable data operations at scale</li>
+                    <li>Established <strong>proactive alerting and incident response workflows</strong> enabling team to address data quality, pipeline failures, and resource issues without manual monitoring—improving operational efficiency and system reliability</li>
+                </ul>
+
+                <h4>Team Leadership & Capability Development</h4>
+                <ul>
+                    <li><strong>Managed cross-functional analytics team</strong> supporting multiple business units while partnering with <strong>executive stakeholders</strong> on prioritisation, roadmap planning, and resource allocation aligned with business objectives</li>
+                    <li>Led end-to-end recruitment, onboarding, and capability development for analysts and developers up to Lead level, <strong>building team capability in modern data stack</strong> (cloud platforms, Python, Git workflows) and AI-augmented analytics</li>
+                    <li><strong>Championed organisational change management</strong> driving adoption of modern data engineering practices, establishing coding standards, peer review processes, and continuous improvement culture</li>
+                    <li><strong>Established comprehensive technical documentation</strong> and knowledge base on Confluence, ensuring knowledge continuity, best practice standardisation, and enabling self-service capability uplift</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title"><span class="company">Woolworths Group - WooliesX</span> | Lead BI Analyst</div>
+                    <div class="duration">8 Months (Prior to Promotion)</div>
+                </div>
+                <ul>
+                    <li>Led <strong>business unit migration from Amazon Redshift to Google Cloud Platform</strong>, establishing cloud best practices and post-migration governance frameworks</li>
+                    <li>Managed team through recruitment, onboarding, and capability development during critical migration period</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title"><span class="company">Woolworths Group</span> | Senior BI Analyst</div>
+                    <div class="duration">4 Years 10 Months</div>
+                </div>
+                <ul>
+                    <li>Established <strong>centralised Redshift data warehouse</strong> consolidating sales, campaign performance, and rewards data—becoming foundation for business-wide reporting</li>
+                    <li>Designed <strong>automated ETL pipelines with idempotency patterns</strong> enabling immediate post-campaign reporting, eliminating manual processing overhead</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title"><span class="company">Various Organisations</span> | Early Career Experience</div>
+                    <div class="duration">6+ Years</div>
+                </div>
+                <p><strong>BI Consultant & Developer Roles</strong> across diverse industries including telecommunications (Optus/Servian), public sector (Department of Education), financial services (Toyota Financial Services), retail (Myer), and pharmaceuticals (3A Pharmaceutical)</p>
+                <ul>
+                    <li>Delivered end-to-end BI solutions spanning database architecture, ETL development, multidimensional modelling, and report automation</li>
+                    <li>Expertise in Microsoft SQL Server, Oracle Database, SSRS, MicroStrategy, and Cognos platforms</li>
+                    <li>Built analytics solutions for Finance, HR, Sales, Inventory, Campaign Management, and Facility Management domains</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Expertise</h2>
+
+            <div class="tech-grid">
+                <div class="tech-area">
+                    <h4>Cloud & Data Platforms</h4>
+                    <ul>
+                        <li><strong>Google Cloud Platform:</strong> BigQuery, Cloud Composer (Airflow), Looker, Looker Studio, Cloud Run, Secret Manager, Cloud Storage, Vertex AI, Firestore</li>
+                        <li><strong>Amazon Web Services:</strong> Redshift, S3</li>
+                        <li><strong>Microsoft Azure:</strong> SQL Server, Power BI</li>
+                    </ul>
+                </div>
+
+                <div class="tech-area">
+                    <h4>AI & Machine Learning</h4>
+                    <ul>
+                        <li>Generative AI & LLM Integration</li>
+                        <li>Multi-Agent Orchestration & Async Processing</li>
+                        <li>RAG Architecture & Vector Embeddings</li>
+                        <li>Automated Statistical Analysis & Anomaly Detection</li>
+                        <li>Cost Management for LLM Operations</li>
+                    </ul>
+                </div>
+
+                <div class="tech-area">
+                    <h4>Analytics & Visualisation</h4>
+                    <ul>
+                        <li>Enterprise BI Tools (MicroStrategy, Tableau, Looker, Power BI)</li>
+                        <li>Python Analytics Stack (Pandas, NumPy, Matplotlib, Seaborn, Plotly)</li>
+                        <li>Statistical Visualisation & Interactive Dashboards</li>
+                        <li>Automated Report Generation</li>
+                    </ul>
+                </div>
+
+                <div class="tech-area">
+                    <h4>Development & Operations</h4>
+                    <ul>
+                        <li>Python (Advanced)</li>
+                        <li>SQL (Expert)</li>
+                        <li>Git Version Control (Bitbucket / Github)</li>
+                        <li>Async/Await Programming</li>
+                        <li>API Integration & Development</li>
+                        <li>Observability & Logging</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education & Certifications</h2>
+            
+            <div class="education-item">
+                <strong>Google Certifications:</strong> GCP | Data Analyst | BI and Analytics with Looker
+            </div>
+            
+            <div class="education-item">
+                <strong>Microsoft Certification:</strong> Microsoft Certified Solutions Expert – Business Intelligence (MCSE: BI)
+            </div>
+            
+            <div class="education-item">
+                <strong>Academic Qualifications:</strong> Master of Computer Science | Bachelor of Information Technology
+            </div>
+        </section>
+
+        <section>
+            <h2>Personal Projects & Continuous Innovation</h2>
+            <div class="summary" style="margin-bottom: 20px;">
+                <p>Beyond my professional work, I actively build AI-powered solutions to explore emerging technologies and solve real-world problems:</p>
+            </div>
+
+            <div class="job" style="margin-bottom: 20px;">
+                <h4>News Maven</h4>
+                <p>Multilingual news intelligence platform featuring automated daily web scraping, content classification, and AI-powered news aggregation. First personal project implementing full internationalisation support, allowing users to consume curated news in their preferred language.</p>
+            </div>
+
+            <div class="job" style="margin-bottom: 20px;">
+                <h4>Portfolio Intelligence Analyser</h4>
+                <p>Automated investment research system integrating ASX and Yahoo Finance data with real-time news sentiment analysis. Delivers daily consolidated reports on portfolio holdings with actionable insights, and proactively identifies investment opportunities based on positive long-term catalysts and fundamental analysis.</p>
+            </div>
+
+            <div class="job" style="margin-bottom: 20px;">
+                <h4>SwiftQuiz & SwiftQuiz Language Learning</h4>
+                <p>AI-driven assessment platforms generating contextual multiple-choice tests across any domain. The language learning variant features adaptive difficulty levels and targeted skill assessment (reading, listening, grammar, vocabulary), demonstrating practical applications of generative AI for personalised education.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>What I Bring to Your Organisation</h2>
+            <div class="value-prop">
+                <p>I thrive in environments where data leadership directly drives business outcomes and competitive advantage. My strength lies in <strong>translating vision into execution</strong>—architecting scalable platforms, establishing governance foundations, and pioneering AI capabilities that deliver immediate value while positioning organisations for long-term growth. I excel at:</p>
+                <ul>
+                    <li><strong>Data Leadership & Direction:</strong> Developing multi-year roadmaps, partnering with executives on prioritisation, and aligning data initiatives with business objectives while managing stakeholder expectations across technical and non-technical audiences</li>
+                    <li><strong>AI-Driven Innovation as Differentiator:</strong> Leading industry in implementing generative AI and multi-agent systems for analytics automation—establishing <strong>AI-first data culture</strong> that reduces analysis time by 90%+ while maintaining governance, cost control, and data quality</li>
+                    <li><strong>Platform Architecture & Engineering:</strong> Designing cloud-native data platforms with production-grade considerations (scalability, security, cost optimisation, operational resilience) and modern data engineering practices (idempotency, observability, automated governance)</li>
+                    <li><strong>Data Democratisation at Scale:</strong> Building self-service analytics capabilities that empower stakeholders across skill levels, reducing analyst dependency and accelerating insight-to-action cycles through teaching-first platforms and curated data foundations</li>
+                </ul>
+                <p style="margin-top: 15px;">I'm seeking opportunities with forward-thinking organisations where I can lead comprehensive data and analytics functions, drive AI adoption, and create measurable business impact through platform thinking and technical execution.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

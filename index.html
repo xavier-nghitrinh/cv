@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xavier Trinh - AI-Driven Data & Analytics Leader</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         * {
             margin: 0;
@@ -309,6 +310,43 @@
                 font-size: 1.4em;
             }
         }
+
+        /* Charts Section */
+        .charts-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 25px 0;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 5px;
+            border-left: 4px solid #2c5aa0;
+        }
+
+        .chart-wrapper {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .chart-wrapper h5 {
+            font-size: 1.05em;
+            color: #2c5aa0;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .chart-wrapper canvas {
+            max-height: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .charts-container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -395,7 +433,7 @@
 
                 <h4>Data Democratisation Strategy & AI-Powered Analytics Platform</h4>
                 <ul>
-                    <li><strong>Led data democratisation initiative within business units</strong>, architecting and deploying <strong>Data Maven</strong>—a strategic market differentiator positioning organisation ahead of competitors through conversational AI capabilities for self-service analytics</li>
+                    <li><strong>Led data democratisation initiative within business units</strong>, architecting and deploying <strong>Data Maven</strong>—a strategic market differentiator positioning organisation ahead of competitors through conversational AI capabilities for self-service analytics. Platform has <strong>100+ users since launch</strong> (late 2024) with <strong>~50 active monthly users</strong></li>
                     <li>Designed <strong>multi-tenant platform architecture</strong> on Google Cloud (Vertex AI / Cloud Run) with production-grade considerations: <strong>scalability</strong> (concurrent user handling), <strong>security</strong> (role-based access, audit logging), <strong>cost optimisation</strong> (quota controls, resource management), and operational resilience</li>
                     <li>Implemented sophisticated <strong>multi-agent orchestration system</strong> coordinating specialised agents (SQL generation, Python analytics, visualisation, document retrieval) with context-aware RAG architecture combining vector embeddings and semantic search across <strong>organisational knowledge repositories</strong></li>
                     <li><strong>Established AI-first data culture</strong> enabling 40+ users across business units to independently query billion-record datasets, achieving significant reduction in analyst dependency and accelerating insight-to-action cycles</li>
@@ -415,10 +453,23 @@
                 <h4>Enterprise Data Platform & Architecture Excellence</h4>
                 <ul>
                     <li><strong>Designed and delivered data platform roadmap</strong> establishing <strong>billion-record source-of-truth data foundations</strong> across sales, rewards membership, partner transactions, and campaign performance—enabling <strong>consistent cross-business-unit reporting and analysis</strong></li>
+                    <li><strong>Source of Truth Data demonstrating exceptional adoption</strong>: achieved <strong>67% growth in monthly active users</strong> over 2-year period, with <strong>query volume increasing 3.2x</strong> (from baseline to 40,000+ monthly jobs), peaking at <strong>50,000+ queries</strong>—validating platform value and data quality trust across business units</li>
+                    <li><strong>Self-serve reporting platform enabling cross-functional analytics</strong>: demonstrated <strong>sustained adoption growth</strong> since launch, added more than 20% of monthly active users vs 6 months ago, empowering business teams to independently access performance insights without analyst dependency</li>
                     <li>Implemented <strong>BigQuery optimisation best practices</strong> including table partitioning (time-based), clustering (high-cardinality dimensions), and materialised views for query performance, achieving <strong>significant cost reduction</strong> through slot optimisation and storage management</li>
                     <li>Architected <strong>dimensional data models</strong> with semantic layers optimised for <strong>multi-terabyte dataset analysis</strong> at scale, incorporating slowly-changing dimension handling, fact table aggregation strategies, and denormalisation patterns where appropriate</li>
                     <li>Delivered <strong>measurable business impact</strong>: <strong>computing resource savings</strong> through query optimisation, <strong>improved data accuracy</strong> via single source of truth, <strong>productivity gains across business units</strong> by eliminating redundant ETL processes and enabling self-service analytics</li>
                 </ul>
+
+                <div class="charts-container">
+                    <div class="chart-wrapper">
+                        <h5>Source of Truth Platform - Usage Growth Index</h5>
+                        <canvas id="sotChart"></canvas>
+                    </div>
+                    <div class="chart-wrapper">
+                        <h5>Self-serve Reporting Platform - Adoption Index</h5>
+                        <canvas id="crpChart"></canvas>
+                    </div>
+                </div>
 
                 <h4>Data Governance Automation & Platform Operations</h4>
                 <ul>
@@ -574,5 +625,141 @@
             </div>
         </section>
     </div>
+
+    <script>
+        // Source of Truth Chart - Dual Axis (Indexed)
+        const sotCtx = document.getElementById('sotChart').getContext('2d');
+        const sotChart = new Chart(sotCtx, {
+            type: 'line',
+            data: {
+                labels: ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10', 'M11', 'M12',
+                         'M13', 'M14', 'M15', 'M16', 'M17', 'M18', 'M19', 'M20', 'M21', 'M22', 'M23', 'M24',
+                         'M25', 'M26'],
+                datasets: [
+                    {
+                        label: 'User Growth Index',
+                        data: [100, 118, 129, 128, 143, 139, 155, 143, 145, 163, 140, 129,
+                               144, 142, 145, 145, 143, 153, 145, 141, 140, 163, 153, 143,
+                               151, 167],
+                        borderColor: '#2c5aa0',
+                        backgroundColor: 'rgba(44, 90, 160, 0.1)',
+                        yAxisID: 'y',
+                        tension: 0.3,
+                        fill: true
+                    },
+                    {
+                        label: 'Query Volume Index',
+                        data: [100, 93, 115, 122, 131, 116, 130, 151, 177, 195, 173, 180,
+                               215, 226, 260, 260, 294, 310, 333, 316, 332, 373, 389, 336,
+                               322, 325],
+                        borderColor: '#6aa84f',
+                        backgroundColor: 'rgba(106, 168, 79, 0.1)',
+                        yAxisID: 'y1',
+                        tension: 0.3,
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom'
+                    }
+                },
+                scales: {
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: 'User Growth Index (Base=100)',
+                            color: '#2c5aa0'
+                        },
+                        ticks: {
+                            color: '#2c5aa0'
+                        }
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        title: {
+                            display: true,
+                            text: 'Query Volume Index (Base=100)',
+                            color: '#6aa84f'
+                        },
+                        ticks: {
+                            color: '#6aa84f'
+                        },
+                        grid: {
+                            drawOnChartArea: false,
+                        },
+                    },
+                    x: {
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    }
+                }
+            }
+        });
+
+        // Self-serve Reporting Platform Chart - Single Axis (Indexed)
+        const crpCtx = document.getElementById('crpChart').getContext('2d');
+        const crpChart = new Chart(crpCtx, {
+            type: 'line',
+            data: {
+                labels: ['M1', 'M2', 'M3', 'M4', 'M5', 'M6'],
+                datasets: [
+                    {
+                        label: 'Adoption Index',
+                        data: [100, 103, 106, 86, 98, 119],
+                        borderColor: '#2c5aa0',
+                        backgroundColor: 'rgba(44, 90, 160, 0.1)',
+                        tension: 0.3,
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Adoption Index (Base=100)',
+                            color: '#2c5aa0'
+                        },
+                        ticks: {
+                            color: '#2c5aa0'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>

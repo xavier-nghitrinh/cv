@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto bg-white p-6 sm:p-8 rounded-lg shadow-sm border border-gray-200">
+    <h1 class="text-2xl font-bold text-gray-900 mb-2">New Job Application</h1>
+    <p class="text-sm text-gray-600 mb-6">Paste the Job Description (JD) below. Gemini 3.7 Flash will assess your profile, calculate match score, and pull key details.</p>
+
+    <form action="/new" method="POST" class="space-y-6">
+        <div>
+            <label for="jd_text" class="block text-sm font-semibold text-gray-700 mb-2">Job Description (JD)</label>
+            <textarea id="jd_text" name="jd_text" rows="12" required
+                class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm font-mono"
+                placeholder="Paste the full job description here..."></textarea>
+        </div>
+
+        <div class="flex justify-end gap-3">
+            <a href="/" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition text-sm font-medium">Cancel</a>
+            <button type="submit" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition font-medium text-sm flex items-center gap-2">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Assess Profile & Extract Details
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
